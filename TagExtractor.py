@@ -23,9 +23,13 @@ class ReuterRooter:
             #extract data between <Tag>...</Tag>
             startTag = "<"+tag+">"
             endTag = "</"+tag+">"
-            startLen = self.reuterList[reuterNumber].index(startTag) + len(startTag)
-            endLen = self.reuterList[reuterNumber].index(endTag)
-            return self.reuterList[reuterNumber][startLen:endLen]
+            try:
+                startLen = self.reuterList[reuterNumber].index(startTag) + len(startTag)
+                endLen = self.reuterList[reuterNumber].index(endTag)
+                ret = self.reuterList[reuterNumber][startLen:endLen]
+                return re.sub("&lt;","<", ret)
+            except ValueError:
+                return ""
         else:
             return ""
 
