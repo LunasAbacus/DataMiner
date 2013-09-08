@@ -1,3 +1,18 @@
 
 Helpful Links:
 http://stackoverflow.com/questions/10508487/xml-parsing-in-python-using-elementtree
+http://stackoverflow.com/questions/15147133/extracting-information-from-sgm-files-using-python
+http://stackoverflow.com/questions/7693515/why-is-elementtree-raising-a-parseerror
+
+Beautiful Soup:
+http://www.crummy.com/software/BeautifulSoup/bs3/download/2.x/documentation.html
+http://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+NLTK: - to group similar words
+http://nltk.org/
+http://www.slideshare.net/japerk/nltk-in-20-minutes
+http://nltk.org/book/ch01.html
+https://groups.google.com/forum/#!topic/nltk-users/kr-ezQ_rrOk - grouping words with similar meanings (google "how to group similiar words nltk")
+
+python dictionary:
+http://www.tutorialspoint.com/python/python_dictionary.htm
