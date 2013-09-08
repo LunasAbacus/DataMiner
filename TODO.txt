@@ -13,6 +13,7 @@ http://nltk.org/
 http://www.slideshare.net/japerk/nltk-in-20-minutes
 http://nltk.org/book/ch01.html
 https://groups.google.com/forum/#!topic/nltk-users/kr-ezQ_rrOk - grouping words with similar meanings (google "how to group similiar words nltk")
+http://stackoverflow.com/questions/526469/practical-examples-of-nltk-use - use first answer
 
 python dictionary:
 http://www.tutorialspoint.com/python/python_dictionary.htm

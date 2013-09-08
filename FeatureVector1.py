@@ -21,6 +21,9 @@ def findtags(tag_prefix, tagged_text):
 def printFrequentNouns(body):
     tokens = nltk.word_tokenize(body)
     tagged = nltk.pos_tag(tokens)
+    #tagger = nltk.UnigramTagger(nltk.corpus.brown.tagged_sents())
+    #tagged = tagger.tag(tokens)
+    #print tagged
     tagdict = findtags('NN', tagged)
     for tag in sorted(tagdict):
         print tagdict[tag]
