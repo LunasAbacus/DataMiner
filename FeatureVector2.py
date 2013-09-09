@@ -63,11 +63,12 @@ def main():
     numberOfReuters = sgm.NumberOfReuters()
     
     #print frequuent nouns
-    for i in range(0, 1):
+    for i in range(0, numberOfReuters):
         print(sgm.ExtractTagData(i, "TITLE"))
         #printFrequentNouns(sgm.ExtractTagData(i, "BODY"))
         featureVector = extractFeatureVector(sgm.ExtractTagData(i, "BODY"))
         print featureVector
+        print
 
 if __name__ == '__main__':
     main()
