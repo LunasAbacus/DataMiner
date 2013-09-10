@@ -15,7 +15,7 @@ import nltk
 import re
 
 def AddToDict(daDic, word, blacklist):
-    if word not in blacklist and len(word) > 2:
+    if (len(word) > 2) and (word not in blacklist):
         if word in daDic:
             daDic[word] += 1
         else:
@@ -23,12 +23,14 @@ def AddToDict(daDic, word, blacklist):
 
 def main():
     articleMap = {}
-
+    blacklist = []
 
     #todo - use stop word found at
     #http://www.webconfs.com/stop-words.php
     #alread created file just read it
-    blacklist = ['also','and','are','the','its']
+    with open('stopwords.txt') as f:
+        for line in f:
+            blacklist.append(line.rstrip())
 
     #for i in range(0,23):
     for i in range(0,1):
@@ -48,7 +50,7 @@ def main():
                 #print token
                 AddToDict(article, token, blacklist)
             for key in sorted(article.keys()):
-                print key
+                print key + ":" + str(article[key])
             articleMap[title] = article
         #print articleMap
         print 'done'
