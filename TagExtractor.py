@@ -38,10 +38,11 @@ class ReuterRooter:
         #returns an array of reuters for the sgm file
         strList = []
 
-        with open('reut2-000.sgm') as f:
+        with open(filename) as f:
             for line in f:
                 line = re.sub("(&#\d+;)","", line)
-                line = re.sub("[^\x20-\x7f]+","",line)
+                line = re.sub("\t\r\n", " ", line)
+                #line = re.sub("[^\x20-\x7f]+","",line)
                 strList.append(line)
 
         sgm = ''.join(strList)
@@ -49,7 +50,7 @@ class ReuterRooter:
 
 def main():
     #get a list of reuters
-    sgmRooter = ReuterRooter('reut2-000.sgm')
+    sgmRooter = ReuterRooter('reut2-001.sgm')
 
     print(sgmRooter.ExtractTagData(1,"BODY"))
 
