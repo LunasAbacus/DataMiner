@@ -32,27 +32,30 @@ def main():
         for line in f:
             blacklist.append(line.rstrip())
 
-    #for i in range(0,23):
-    for i in range(0,1):
-        filename = "reut2-%s.sgm" % ("%03d" % i)
-        print filename + "\n"
-        sgm = RR(filename)
-        #for j in range(0,sgm.NumberOfReuters()-1):
-        for j in range(0,1):
-            article = {}
-            title = sgm.ExtractTagData(j,"TITLE")
-            #print title
-            body = sgm.ExtractTagData(j,"BODY")
-            body = re.sub("[\d]"," ", body)
-            body = re.sub("[^\w]"," ", body)
-            body = body.lower()
-            for token in body.split():
-                #print token
-                AddToDict(article, token, blacklist)
-            for key in sorted(article.keys()):
-                print key + ":" + str(article[key])
-            articleMap[title] = article
-        #print articleMap
+    with open('output.txt','w') as wr:
+        #for i in range(0,23):
+        for i in range(0,2):
+            filename = "reut2-%s.sgm" % ("%03d" % i)
+            print filename
+            sgm = RR(filename)
+            for j in range(0,sgm.NumberOfReuters()-1):
+            #for j in range(0,1):
+                article = {}
+                title = sgm.ExtractTagData(j,"TITLE")
+                #print title
+                wr.write("\n"+title)
+                body = sgm.ExtractTagData(j,"BODY")
+                body = re.sub("[\d]"," ", body)
+                body = re.sub("[^\w]"," ", body)
+                body = body.lower()
+                for token in body.split():
+                    #print token
+                    AddToDict(article, token, blacklist)
+                for key in sorted(article.keys()):
+                    #print key + ":" + str(article[key])
+                    wr.write("\n\t" + key + ":" + str(article[key]))
+                articleMap[title] = article
+            #print articleMap
         print 'done'
 
 if __name__ == '__main__':
