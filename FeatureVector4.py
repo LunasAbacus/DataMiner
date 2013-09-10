@@ -52,7 +52,12 @@ def getFreqDist(body):
     tag_fd = nltk.FreqDist(tagged)
     print tag_fd
     print
-    
+
+    #print [word + "/" + tag for (word, tag) in tag_fd if tag.startswith('V')]
+    for (word, tag) in tag_fd:
+        print word
+    print
+
 
 def main():
 
@@ -68,7 +73,7 @@ def main():
     #print
 
     #print frequuent nouns
-    for i in range(0, 2):
+    for i in range(0, 1):
         print(sgm.ExtractTagData(i, "TITLE"))
         getFreqDist(sgm.ExtractTagData(i, "BODY"))
 
