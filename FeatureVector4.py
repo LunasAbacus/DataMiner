@@ -75,7 +75,7 @@ def main():
 
     featureVector = []
     
-    with open('output.txt','w') as wr:
+    with open('output4.txt','w') as wr:
         #for i in range(0,23):
         for i in range(0, 1):
             filename = "reut2-%s.sgm" % ("%03d" % i)
