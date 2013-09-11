@@ -26,9 +26,14 @@ def main():
 
     print "printing first " + str(sys.argv[1]) + "sgm files"
 
-    with open('output.txt','w') as wr:
+    with open('output-FeatureVector3.txt','w') as wr:
         #for i in range(0,23):
-        for i in range(0,sys.argv[1]):
+        try:
+            numSmgs = int(sys.argv[1])
+        except ValueError:
+            print("Invalid number passes as argument")
+            numSmgs = 1
+        for i in range(0,numSmgs):
             filename = "reut2-%s.sgm" % ("%03d" % i)
             print filename
             sgm = RR(filename)

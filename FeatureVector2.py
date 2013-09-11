@@ -22,21 +22,21 @@ def printFrequentNouns(body):
     print
 
 def extractFeatureVector(body):
-    
+
     blackList = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+',
                  '-', '=', '{', '}', '|', '[', ']', '\\', ']', ';', '\'', ':', '"',
                  ',', '.', '/', '<', '>', '?', 'to', 'a', 'is', 'and', 'be', 'the',
                  'of']
-    
+
     featureVector = []
-    
+
     blackListWords = []
-    
+
     #create the black list words
     with open('stopwords.txt') as f:
         for line in f:
             blackListWords.append(line.rstrip())
-    
+
     tokens = nltk.word_tokenize(body)
     tagged = nltk.pos_tag(tokens)
     #tagger = nltk.UnigramTagger(nltk.corpus.brown.tagged_sents())
@@ -54,7 +54,7 @@ def extractFeatureVector(body):
 
 def main():
 
-    with open('output2.txt','w') as wr:
+    with open('output-FeatureVector2.txt','w') as wr:
         #for i in range(0,23):
         for i in range(0, 1):
             filename = "reut2-%s.sgm" % ("%03d" % i)
@@ -73,7 +73,7 @@ def main():
                 for k in range(0, len(featureVector)):
                     wr.write("\n" + featureVector[k])
                 wr.write("\n")
-    
+
     print 'done'
 
 if __name__ == '__main__':

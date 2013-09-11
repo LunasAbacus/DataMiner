@@ -23,21 +23,21 @@ def printFrequentNouns(body):
     print
 
 def getFreqDist(body):
-    
+
     blackList = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+',
                  '-', '=', '{', '}', '|', '[', ']', '\\', ']', ';', '\'', ':', '"',
                  ',', '.', '/', '<', '>', '?', 'to', 'a', 'is', 'and', 'be', 'the',
                  'of']
-    
+
     blackListWords = []
-    
+
     featureVector = []
-    
+
     body = re.sub("[\d]"," ", body)
     body = re.sub("[^\w]"," ", body)
     body = re.sub("\\b\w\w\\b", " ", body)
     body = re.sub("\\b\w\\b", " ", body)
-    
+
     #create the black list words
     with open('stopwords.txt') as f:
         for line in f:
@@ -58,7 +58,7 @@ def getFreqDist(body):
     for i in range(0, len(tagged)):
         if not tagged[i][0] in blackListWords:
             taggedCleaned.append(tagged[i])
-    
+
     #get the frequency distribution
     tag_fd = nltk.FreqDist(tagged)
     #print tag_fd
@@ -74,8 +74,8 @@ def getFreqDist(body):
 def main():
 
     featureVector = []
-    
-    with open('output4.txt','w') as wr:
+
+    with open('output-FeatureVector4.txt','w') as wr:
         #for i in range(0,23):
         for i in range(0, 1):
             filename = "reut2-%s.sgm" % ("%03d" % i)
