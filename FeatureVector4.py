@@ -13,6 +13,7 @@
 from TagExtractor import ReuterRooter as RR
 import nltk
 from decimal import Decimal
+import re
 
 def findtags(tag_prefix, tagged_text):
     cfd = nltk.ConditionalFreqDist((tag, word) for (word, tag) in tagged_text
@@ -36,6 +37,20 @@ def getFreqDist(body):
                  '-', '=', '{', '}', '|', '[', ']', '\\', ']', ';', '\'', ':', '"',
                  ',', '.', '/', '<', '>', '?', 'to', 'a', 'is', 'and', 'be', 'the',
                  'of']
+    
+    blackListWords = []
+    
+    featureVector = []
+    
+    body = re.sub("[\d]"," ", body)
+    body = re.sub("[^\w]"," ", body)
+    body = re.sub("\\b\w\w\\b", " ", body)
+    #body = re.sub("\\b\w\\b", " ", body)
+    
+    #create the black list words
+    with open('stopwords.txt') as f:
+        for line in f:
+            blackListWords.append(line.rstrip())
 
     #split up the word into tokens
     tokens = nltk.word_tokenize(body)
@@ -47,6 +62,11 @@ def getFreqDist(body):
     ##entities = nltk.chunk.ne_chunk(tagged)
     print tagged
     print
+
+    taggedCleaned = []
+    for i in range(0, len(tagged)):
+        if not tagged[i][0] in blackListWords:
+            taggedCleaned.append(tagged[i])
     
     #get the frequency distribution
     tag_fd = nltk.FreqDist(tagged)
@@ -55,9 +75,10 @@ def getFreqDist(body):
 
     #print [word + "/" + tag for (word, tag) in tag_fd if tag.startswith('V')]
     for (word, tag) in tag_fd:
-        print word
-    print
+        if(word not in blackListWords):
+            featureVector.append(word)
 
+    return featureVector[:10]
 
 def main():
 
@@ -72,10 +93,13 @@ def main():
     #print(sgm.ExtractTagData(0, "TITLE"))
     #print
 
+    featureVector = []
+    
     #print frequuent nouns
-    for i in range(0, 1):
+    for i in range(0, 3):
         print(sgm.ExtractTagData(i, "TITLE"))
-        getFreqDist(sgm.ExtractTagData(i, "BODY"))
+        featureVector = getFreqDist(sgm.ExtractTagData(i, "BODY"))
+        print featureVector
 
 if __name__ == '__main__':
     main()
