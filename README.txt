@@ -30,6 +30,13 @@ output-FeatureVector4.txt - sample output for FeatureVector4
 Installation
 ============
 
+1. First download python 2.7.5 from http://www.python.org/download/
+2. Next instal nltk, following instructions from http://nltk.org/install.html
+3. In python idle, type the following
+	import nltk
+	nltk.download()
+4. Click the download button from the window that pops up
+
 Runing The Program
 ==================
 
