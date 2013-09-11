@@ -13,6 +13,7 @@
 from TagExtractor import ReuterRooter as RR
 import nltk
 import re
+import sys
 
 def AddToDict(daDic, word, blacklist):
     if (len(word) > 2) and (word not in blacklist):
@@ -32,9 +33,11 @@ def main():
         for line in f:
             blacklist.append(line.rstrip())
 
+    print "printing first " + str(sys.argv[1]) + "sgm files"
+
     with open('output.txt','w') as wr:
         #for i in range(0,23):
-        for i in range(0,2):
+        for i in range(0,sys.argv[1]):
             filename = "reut2-%s.sgm" % ("%03d" % i)
             print filename
             sgm = RR(filename)
