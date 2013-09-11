@@ -1,13 +1,4 @@
-#-------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
-#
-# Author:      ShiroRaven
-#
-# Created:     07/09/2013
-# Copyright:   (c) ShiroRaven 2013
-# Licence:     <your licence>
-#-------------------------------------------------------------------------------
+
 #!/usr/bin/env python
 
 from TagExtractor import ReuterRooter as RR
@@ -45,7 +36,7 @@ def getFreqDist(body):
     body = re.sub("[\d]"," ", body)
     body = re.sub("[^\w]"," ", body)
     body = re.sub("\\b\w\w\\b", " ", body)
-    #body = re.sub("\\b\w\\b", " ", body)
+    body = re.sub("\\b\w\\b", " ", body)
     
     #create the black list words
     with open('stopwords.txt') as f:
@@ -70,8 +61,8 @@ def getFreqDist(body):
     
     #get the frequency distribution
     tag_fd = nltk.FreqDist(tagged)
-    print tag_fd
-    print
+    #print tag_fd
+    #print
 
     #print [word + "/" + tag for (word, tag) in tag_fd if tag.startswith('V')]
     for (word, tag) in tag_fd:
@@ -82,24 +73,28 @@ def getFreqDist(body):
 
 def main():
 
-    sgm = RR('reut2-000.sgm')
-
-    #print out all article names
-    num = sgm.NumberOfReuters()
-
-    #for i in range(0,num):
-        #print(sgm.ExtractTagData(i,"TITLE"))
-    
-    #print(sgm.ExtractTagData(0, "TITLE"))
-    #print
-
     featureVector = []
     
-    #print frequuent nouns
-    for i in range(0, 3):
-        print(sgm.ExtractTagData(i, "TITLE"))
-        featureVector = getFreqDist(sgm.ExtractTagData(i, "BODY"))
-        print featureVector
+    with open('output.txt','w') as wr:
+        #for i in range(0,23):
+        for i in range(0, 1):
+            filename = "reut2-%s.sgm" % ("%03d" % i)
+            print filename
+            sgm = RR(filename)
+            #print frequuent nouns
+            for j in range(0, sgm.NumberOfReuters() - 1):
+            #for j in range(0, 1):
+                title = sgm.ExtractTagData(j, "TITLE")
+                print title
+                print
+                featureVector = getFreqDist(sgm.ExtractTagData(j, "BODY"))
+                print featureVector
+                print
+                wr.write("\n" + title)
+                for k in range(0, len(featureVector)):
+                    wr.write("\n" + featureVector[k])
+                wr.write("\n")
+    print 'done'
 
 if __name__ == '__main__':
     main()

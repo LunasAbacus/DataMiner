@@ -1,13 +1,4 @@
-#-------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
-#
-# Author:      ShiroRaven
-#
-# Created:     07/09/2013
-# Copyright:   (c) ShiroRaven 2013
-# Licence:     <your licence>
-#-------------------------------------------------------------------------------
+
 #!/usr/bin/env python
 
 from TagExtractor import ReuterRooter as RR
