@@ -1,0 +1,315 @@
+accuracy: 0.461538461538
+
+Most Informative Features
+           contains(pct) = True           money- : earn   =      5.4 : 1.0
+       contains(january) = True              lei : earn   =      5.4 : 1.0
+         contains(sales) = True           housin : earn   =      3.9 : 1.0
+          contains(year) = True           coffee : earn   =      2.8 : 1.0
+          contains(dlrs) = True           coffee : acq    =      2.6 : 1.0
+      contains(business) = True              acq : earn   =      2.5 : 1.0
+           contains(mln) = True             earn : acq    =      2.3 : 1.0
+          contains(bank) = True           money- : acq    =      2.2 : 1.0
+      contains(february) = True             jobs : acq    =      2.2 : 1.0
+       contains(foreign) = False            earn : coffee =      2.2 : 1.0
+        contains(coffee) = False            earn : coffee =      2.2 : 1.0
+     contains(executive) = False            earn : coffee =      2.2 : 1.0
+       contains(balance) = False            earn : coffee =      2.2 : 1.0
+    contains(seasonally) = False            earn : housin =      2.2 : 1.0
+         contains(kenya) = False            earn : coffee =      2.2 : 1.0
+         contains(units) = False            earn : housin =      2.2 : 1.0
+         contains(added) = False            earn : coffee =      2.2 : 1.0
+         contains(price) = False            earn : housin =      2.2 : 1.0
+        contains(tonnes) = False            earn : coffee =      2.2 : 1.0
+     contains(difficult) = False            earn : coffee =      2.2 : 1.0
+
+kodak <ek> has new data storage, usage systems
+
+earn
+
+bangor hydro <bang> seeks rate cut
+
+earn
+
+browning-ferris <bfi>waste disposal site cleared
+
+earn
+
+pharmacia ab <phab st>  1986 year
+earn 
+earn
+
+vwr corp <vwrx> forms new unit
+
+earn
+
+hallwood group <hwg> official get saxon post
+
+earn
+
+pharmacia forecasts higher 1987 earnings
+earn 
+earn
+
+beryllium int'l sets joint venture with cominco
+
+earn
+
+canada real 4th qtr gdp rose 1.1 pct, after 3rd qtr 1.1 pct rise - official
+
+gnp 
+earn
+
+canada 4th qtr current account deficit 2.3 billion dlrs vs 3rd qtr 1.9 billion deficit - official
+
+bop 
+earn
+
+united-guardian <unir>, <federal> sign contract
+
+earn
+
+mclean industries <mii> unit transers service
+ship 
+earn
+
+proxmire vows quick action on u.s. banking bill
+
+earn
+
+u.s. lard consumption in january
+
+earn
+
+societe generale dutch unit launches cd programme
+
+earn
+
+mony funding issues 125 mln dlr eurobond
+
+earn
+
+small quantity of uk wheat sold to home market
+grain wheat 
+earn
+
+canada december gdp up 1.2 pct after november's 0.2 pct fall - official
+
+gnp 
+earn
+
+first federal savings <ffkz> year net
+earn 
+earn
+
+boeing <ba> says order worth one billion dlrs
+
+earn
+
+inland <iad> files for 1.5 mln shares off
+
+earn
+
+<acustar corp> has unauthorized account action
+
+earn
+
+toll brothers inc <tol> 1st qtr jan 31 net
+earn 
+earn
+
+unicorp american <uac> in joint venture
+
+earn
+
+pillsbury co <psy> votes quarterly dividend
+earn 
+earn
+
+berkshire gas co <bgas> pays regular qtlry div
+earn 
+earn
+
+u.k. wheat and barley exports adjusted upwards
+grain wheat barley 
+earn
+
+canada gdp rises 3.1 pct in 1986
+gnp 
+earn
+
+east europe wheat winterkill possible, accu says
+grain wheat 
+earn
+
+charming shoppes inc <chrs> 4th qtr jan 31 net
+earn 
+earn
+
+pansophic systems <pns> splits stock 2-for-1
+earn 
+earn
+
+lac <lac> intersects more gold at doyon mine
+gold 
+earn
+
+amr <amr> discounts talk on pan am <pn> deal
+
+earn
+
+calmar <clmi> seeks to be acquired by <kebo ab>
+acq 
+earn
+
+<fruit of the loom inc> initial offering starts
+
+earn
+
+italy's bnl negotiating purchase of german bank
+acq 
+earn
+
+three killed in south africa zinc refinery clash
+zinc 
+earn
+
+fed expected to add temporary reserves
+interest 
+earn
+
+ec industry output growth slows in 1986
+ipi 
+earn
+
+lsb industries inc <lsb> 4th qtr net
+earn 
+earn
+
+gm <gm> hopes for five-fold rise in european sales
+
+earn
+
+more gold detected at doyon mine
+gold 
+earn
+
+pizza inn <pza> to make announcement
+
+earn
+
+gulf resources and chemical corp <gre> 4th qtr
+earn 
+earn
+
+coffee talks collapse eases need for u.s. bill
+coffee 
+earn
+
+scotia mortgage issues 100 mln canadian dlr bond
+
+earn
+
+pansophic systems inc <pns> 3rd qtr jan 31 net
+earn 
+earn
+
+former treasury official urges currency reforms
+money-fx 
+earn
+
+scotia mortgage issues 100 mln canadian dlr bond
+
+earn
+
+knutson mortgage corp <knmc> sets quarterly
+earn 
+earn
+
+ford motor co of canada ltd 4th qtr shr 8.17 dlrs vs 55 cts
+
+earn 
+earn
+
+ausimont compo <aus> to change name
+
+earn
+
+syria says israel blocks citrus export from gaza
+
+earn
+
+yugoslavia wheat free of winterkill - usda
+grain wheat 
+earn
+
+att <t> sets some phone equipment discounts
+
+earn
+
+ausimont compo nv <aus> 4th qtr net
+earn 
+earn
+
+lyphomed <lmed> in joint marketing pact
+
+earn
+
+regal int'l <rgl> holds bell petroleum option
+
+earn
+
+norton <nrt> to sell south african operations
+acq 
+earn
+
+canada current account deficit up in quarter
+bop 
+earn
+
+home federal of the rockies <hrok> 4th qtr loss
+earn 
+earn
+
+canada december gdp gains 1.2 pct
+gnp 
+earn
+
+saatchi and saatchi buys cleveland consulting
+acq 
+earn
+
+unilever's <un> chesebrough offers to sell bass
+acq 
+earn
+
+continental <gic> sees 1987 net up from tax law
+earn 
+earn
+
+ontario treasury bill yield edges up
+
+earn
+
+firestone to close tire plants in iowa, illinois and oklahoma
+
+
+earn
+
+ford motor co of canada ltd <fc> 4th qtr net
+earn 
+earn
+
+royal bank of canada 1st qtr shr 88 cts vs 1.22 dlrs
+
+earn 
+earn
+
+belgian minister sees new accord on ec oils/fats
+veg-oil livestock carcass 
+earn
+
+anitec image technology corp <antc> 2nd qtr net
+earn 
+earn
+
+dutch money market debt bare
